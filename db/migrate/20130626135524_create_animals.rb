@@ -3,7 +3,7 @@ class CreateAnimals < ActiveRecord::Migration
     create_table :animals do |t|
       t.string :name
       t.text :description
-      t.integer :species
+      t.references :species
 
       t.timestamps
     end

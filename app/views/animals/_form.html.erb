@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :species %><br />
-    <%= f.number_field :species %>
+    <% species_array=Species.all.map {|specie| [specie.name,specie.id]}%>
+    <%= f.select :species_id, options_for_select(species_array) %>
   </div>
   <div class="actions">
     <%= f.submit %>

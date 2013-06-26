@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+
   end
 
   def about
@@ -8,6 +9,5 @@ class PagesController < ApplicationController
   def contact
   end
 
-  def animals
-  end
+
 end
