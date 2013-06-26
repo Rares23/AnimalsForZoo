@@ -1,0 +1,18 @@
+h2 {
+	font-size:24px;
+	margin-bottom:0px;
+}
+div.meta{
+	font-family:Helvetica;
+	color:#aaa;
+	font-size:15px;
+	margin-bottom:10px;
+}
+div.actions{
+	text-align:right;
+	background-color: #f8f8f8;
+	margin-top:10px;
+}
+div.post{
+	border-bottom:1px solid black;
+}
