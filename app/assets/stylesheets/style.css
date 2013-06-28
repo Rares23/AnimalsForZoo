@@ -1,5 +1,6 @@
 body{
 	background-image: url("background.jpg");
+	background-repeat: no-repeat;
 }
 div.content-page{
 	background-color: #ddfdc2;
@@ -49,8 +50,8 @@ nav.navbar div.navbar-inner ul.nav li a:visited
 	text-shadow:none;
 }
 h1#web-title{
-	color: white;
-	text-shadow: 1px 1px 2px black;
+	color: #3f3f3f;
+	
 }
 ul.animal-list{
 	list-style: none;
