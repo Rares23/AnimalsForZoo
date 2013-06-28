@@ -52,5 +52,13 @@ h1#web-title{
 	color: white;
 	text-shadow: 1px 1px 2px black;
 }
-
-
+ul.animal-list{
+	list-style: none;
+}
+li.li-animal{
+	text-decoration: none;
+	
+}
+span.lables{
+	font-size: 16px;
+}

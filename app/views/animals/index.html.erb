@@ -1,30 +1,27 @@
-<h1>Listing animals</h1>
+<h1>All your animals</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Species</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="row">
+  <div class="span9">
+  <% @animals.each do |animal| %>
+    <ul class="animal-list">  
+      <li class="li-animal"><h3><%= animal.name %></h3>
+      <span class="lables">Species:</span> <%= animal.species.name %><br>
+      <span class="lables">Description:</span> <%= animal.description %>
+      <%= link_to 'Show', animal %>
+      <% if @user == "admin" %>
+      <%= link_to 'Edit', edit_animal_path(animal) %>
+      <%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end%>
+      </li>
+    </ul>
+    <hr>
+  <% end %>
 
-<% @animals.each do |animal| %>
-  <tr>
-    <td><%= animal.name %></td>
-    <td><%= animal.description %></td>
-    <td><%= animal.species.name %></td>
-    <td><%= link_to 'Show', animal %></td>
-    <% if @user == "admin" %>
-    <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
-    <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% end%>
-  </tr>
-<% end %>
-</table>
 
-<br />
-<% if @user == "admin"%>
-<%= link_to 'New Animal', new_animal_path %>
-<%end%>
+  <br />
+  <% if @user == "admin"%>
+  <%= link_to 'New Animal', new_animal_path %>
+  <%end%>
+
+  </div>
+</div>
