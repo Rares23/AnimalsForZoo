@@ -1,3 +1,6 @@
+<% session[:login] = "y" %>
+<% session[:type] = 0%>
+<%if session[:login] == "y" && session[:type] == 0%>
 <h2>
 	About us
 </h2>
@@ -8,3 +11,7 @@
 	all began and learn about the Zoo's exciting 40 year history. Have a go at all of the awards 
 	Australia Zoo has snagged!
 </p>
+
+<%else%>
+
+<%end%>

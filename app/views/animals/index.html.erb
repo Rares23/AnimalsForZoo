@@ -8,7 +8,7 @@
       <span class="lables">Species:</span> <%= animal.species.name %><br>
       <span class="lables">Description:</span> <%= animal.description %>
       <%= link_to 'Show', animal %>
-      <% if @user == "admin" %>
+      <% if session[:login] == "y" && session[:type] == 0%>
       <%= link_to 'Edit', edit_animal_path(animal) %>
       <%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end%>

@@ -1,5 +1,7 @@
+<%if session[:login] == "y" && session[:type] == 0%>
 <h1>New animal</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', animals_path %>
+<%end%>
