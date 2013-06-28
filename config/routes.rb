@@ -1,4 +1,7 @@
 AnimalsFromZoo::Application.routes.draw do
+  resources :users
+
+
   get "pages/home", as: "home"
 
   get "pages/about", as: "about"
