@@ -4,7 +4,7 @@ class AnimalsController < ApplicationController
 
   def index
     @animals = Animal.all
-    @user = "Rares"
+    @user
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @animals }
@@ -15,7 +15,7 @@ class AnimalsController < ApplicationController
   # GET /animals/1.json
   def show
     @animal = Animal.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @animal }
@@ -26,7 +26,7 @@ class AnimalsController < ApplicationController
   # GET /animals/new.json
   def new
     @animal = Animal.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @animal }
@@ -36,13 +36,14 @@ class AnimalsController < ApplicationController
   # GET /animals/1/edit
   def edit
     @animal = Animal.find(params[:id])
+    
   end
 
   # POST /animals
   # POST /animals.json
   def create
     @animal = Animal.new(params[:animal])
-
+    
     respond_to do |format|
       if @animal.save
         format.html { redirect_to @animal, notice: 'Animal was successfully created.' }
@@ -58,7 +59,7 @@ class AnimalsController < ApplicationController
   # PUT /animals/1.json
   def update
     @animal = Animal.find(params[:id])
-
+    
     respond_to do |format|
       if @animal.update_attributes(params[:animal])
         format.html { redirect_to @animal, notice: 'Animal was successfully updated.' }
@@ -75,7 +76,7 @@ class AnimalsController < ApplicationController
   def destroy
     @animal = Animal.find(params[:id])
     @animal.destroy
-
+    
     respond_to do |format|
       format.html { redirect_to animals_url }
       format.json { head :no_content }
